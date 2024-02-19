@@ -1,0 +1,226 @@
+/*
+@font-face {
+font-family: 'RobotoSlab';
+src: url('fonts/robotoslab/robotoslab-variablefont_wght-webfont.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+
+}
+@font-face {
+font-family: 'neutonregular';
+src: url('fonts/neutron/neuton-regular-webfont.woff2') format('woff2');
+font-weight: normal;
+font-style: normal;
+
+}
+*/
+/*Animations*/
+/*
+body h1, a{
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode:forwards;
+  animation-delay: 2s;
+  animation: fadeInAnimation ease 1.5s;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+  .quote-container {
+    text-align: left;
+  } /*
+
+body {
+  background: #333;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+}
+
+/* DEMO-SPECIFIC STYLES */
+/* GLOBAL STYLES */
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans);
+@import url('https://fonts.googleapis.com/css2?family=Karla');
+@import url('https://fonts.googleapis.com/css2?family=Francois+One');
+
+.quote-container {
+  position: fixed;
+  top:52%;
+  left: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 50vh; /* Adjust height as needed */
+}
+h1 {
+  color: #E8F1F2;
+}
+
+.fadein h1 { 
+  font-size: 1.5vw;
+  font-family: 'IBM Plex Sans';
+  letter-spacing: .15em;
+  text-align: left;
+  
+  opacity: 0;
+  animation: fadeInAnimation ease 2s;
+  animation-delay: 1.5s; /* Move animation-delay after animation property */
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+body {
+  background: #13293D;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 2px solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+
+  margin: 0 left; /* Gives that scrolling effect as the typing happens */
+  margin-bottom: -10px;
+
+  font-family: 'IBM Plex Sans';
+  font-size: 1.5vw;
+
+  
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 1.5s steps(70, end),
+    blink-caret .3s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.line-container {
+  position: fixed;
+  top: 70%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.line {
+  width: 93vw;
+  max-width: 150vw;
+  height: 2px;
+  background-color: #E8F1F2;
+  margin: 0 auto;
+}
+
+.home-bottom {
+  position: fixed;
+  text-align: center;
+  font-size: 12vh;
+  top: 35vh;
+  left: 3vw;
+  color: #fff; /* Set text color to white or your desired color */
+}
+
+
+.homebutton {
+  position:fixed;
+  text-align:left;
+  top:5vh;
+  left: 3vw;
+  font-size: 4vh;
+  color:white;
+  text-decoration: none;
+  font-family: 'Francois One';
+}
+
+.menu-opener {
+  position: fixed;
+  top: 5vh;
+  right: 3vw;
+  cursor: pointer;
+  padding: 15px;
+  z-index: 1;
+}
+
+.menu-opener .bar {
+  width: 1.75vw;
+  height: 0.5vh;
+  background-color: #ffffff;
+  margin: 5px 0;
+  margin-left: 3vw;
+  
+}
+
+.menu {
+  display: none; /* Initially hide the menu */
+  z-index:2;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #f9f9f9;
+  padding: 20px;
+  width: 200px;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.menu-text {
+  color: #ffffff;
+}
+
+.menu-active {
+  display: flex; /* Display the menu when the menu-active class is applied */
+}
+.menu-active ~ .menu-text,
+.menu-active ~ .menu-opener .bar {
+  margin-right: 200px; /* Adjust the value based on your menu width */
+}
