@@ -1,58 +1,9 @@
-/*
-@font-face {
-font-family: 'RobotoSlab';
-src: url('fonts/robotoslab/robotoslab-variablefont_wght-webfont.woff') format('woff');
-font-weight: normal;
-font-style: normal;
 
-}
-@font-face {
-font-family: 'neutonregular';
-src: url('fonts/neutron/neuton-regular-webfont.woff2') format('woff2');
-font-weight: normal;
-font-style: normal;
-
-}
-*/
-/*Animations*/
-/*
-body h1, a{
-  animation: fadeInAnimation ease 1.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode:forwards;
-  animation-delay: 2s;
-  animation: fadeInAnimation ease 1.5s;
-}
-
-@keyframes fadeInAnimation {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-}
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-  .quote-container {
-    text-align: left;
-  } /*
-
-body {
-  background: #333;
-  padding-top: 5em;
-  display: flex;
-  justify-content: center;
-}
-
-/* DEMO-SPECIFIC STYLES */
-/* GLOBAL STYLES */
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans);
 @import url('https://fonts.googleapis.com/css2?family=Karla');
 @import url('https://fonts.googleapis.com/css2?family=Francois+One');
+@import url('https://fonts.googleapis.com/css2?family=Teko');
+
 
 .quote-container {
   position: fixed;
@@ -69,7 +20,75 @@ body {
 }
 h1 {
   color: #E8F1F2;
+
 }
+.hyper:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.hyper:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.hyper:hover {
+  color: gray;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.hyper:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+h1.awards{
+  font-size: 6vh;
+  z-index: 3;
+  font-family: 'Karla';
+  margin-left: 2.5vw;
+  
+}
+h2.awards {
+  color: #E8F1F2;
+  font-size: 5vh;
+  z-index:1;
+  font-family: 'Karla';
+  margin-left: 2.5vw;
+
+
+  /*  position:absolute;
+  margin-left: -47vw;
+  margin-top:12vh;
+  
+    position:absolute;
+  margin-left: -47vw;
+  margin-bottom: 5px;
+  */
+}
+p.awards {
+  color: #E8F1F2;
+  font-size: 3vh;
+  z-index: 0;
+  font-family: 'Karla';
+  margin-left: 2.5vw;
+  
+
+
+}
+a.awards{
+  color: #E8F1F2;
+  font-size: 3vh;
+  z-index: 0;
+  font-family: 'Karla';
+  margin-left: 2.5vw;
+  font-style:italic;
+}
+
 
 .fadein h1 { 
   font-size: 1.5vw;
@@ -96,7 +115,6 @@ body {
   background: #13293D;
   padding-top: 5em;
   display: flex;
-  justify-content: center;
 }
 
 /* DEMO-SPECIFIC STYLES */
@@ -178,8 +196,7 @@ body {
   position: fixed;
   top: 5vh;
   right: 3vw;
-  cursor: pointer;
-  padding: 15px;
+  cursor:pointer;
   z-index: 1;
 }
 
@@ -187,19 +204,22 @@ body {
   width: 1.75vw;
   height: 0.5vh;
   background-color: #ffffff;
-  margin: 5px 0;
+  position:relative;
+  z-index: 1;
+  right:0vw;
+  top: -5vh;
+  margin: 5px;
   margin-left: 3vw;
-  
 }
 
 .menu {
   display: none; /* Initially hide the menu */
   z-index:2;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
-  background-color: #f9f9f9;
+  background-color: #1D1E2C;
   padding: 20px;
   width: 200px;
   height: 100%;
@@ -208,12 +228,18 @@ body {
 
 .menu a {
   text-decoration: none;
-  color: #333;
-  font-size: 18px;
+  color: #ffffff;
+  font-size: 4vh;
+  font-family: 'Teko';
   margin-bottom: 10px;
 }
 
 .menu-text {
+  font-family: 'Francois One';
+  
+  font-size: 4vh;
+  position:relative;
+  right: 2vw;
   color: #ffffff;
 }
 
