@@ -4,7 +4,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Francois+One');
 @import url('https://fonts.googleapis.com/css2?family=Teko');
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #13293D;
 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left:0vw;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color:white;
+  text-decoration: none;
+  font-family: 'Francois One';
+  font-size:4vh;
+  margin-top:3vh;
+  margin-left: 2vw;
+}
+
+/* Change the link color to #111 (black) on hover 
+li a:hover {
+  background-color: #111;
+}*/
 .quote-container {
   position: fixed;
   top:52%;
@@ -21,6 +55,9 @@
 h1 {
   color: #E8F1F2;
 
+}
+a.link{
+  color: #E8F1F2;
 }
 .hyper:link {
   color: white;
@@ -44,6 +81,9 @@ h1 {
   color: white;
   background-color: transparent;
   text-decoration: underline;
+}
+.awards1:visited{
+  color:white;
 }
 
 h1.awards{
@@ -86,6 +126,13 @@ a.awards{
   z-index: 0;
   font-family: 'Karla';
   margin-left: 2.5vw;
+  font-style:italic;
+}
+a.awards1{
+  color: #E8F1F2;
+  font-size: 3vh;
+  z-index: 0;
+  font-family: 'Karla';
   font-style:italic;
 }
 
