@@ -1,5 +1,6 @@
  document.addEventListener('DOMContentLoaded', function () {
     console.log("Script is running!");
+    
     const quotes = [
         { text: "The only limit to our realization of tomorrow will be our doubts of today.", author: "Franklin D. Roosevelt" },
         { text: "Success is not final, failure is not fatal: It is the courage to continue that counts.", author: "Winston Churchill" },
