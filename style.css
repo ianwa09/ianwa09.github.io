@@ -287,7 +287,7 @@ body {
 .home-bottom {
   position: fixed;
   text-align: center;
-  font-size: 12vh;
+  font-size: 5.6vw;
   top: 35vh;
   left: 3vw;
   color: #fff; /* Set text color to white or your desired color */
@@ -299,7 +299,7 @@ body {
   text-align:left;
   top:5vh;
   left: 3vw;
-  font-size: 4vh;
+  font-size: 2vw;
   color:white;
   text-decoration: none;
   font-family: 'Francois One';
@@ -342,7 +342,7 @@ body {
 .menu a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 4vh;
+  font-size: 2vw;
   font-family: 'Teko';
   margin-bottom: 10px;
 }
@@ -350,7 +350,7 @@ body {
 .menu-text {
   font-family: 'Francois One';
   
-  font-size: 4vh;
+  font-size: 2vw;
   position:relative;
   right: 2vw;
   color: #ffffff;
