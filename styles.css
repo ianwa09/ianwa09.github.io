@@ -24,6 +24,7 @@ body {
 }
 .name {
   font-family: "Georgia", serif;
+  font-style: italic;
 }
 a {
   text-decoration: underline;
