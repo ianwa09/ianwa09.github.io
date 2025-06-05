@@ -1,0 +1,86 @@
+/* Disable Tailwind's reset for links */
+@layer base {
+  a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    text-decoration-color: #9ca3af;
+    color: #d1d5db;
+    transition: all 0.2s ease;
+  }
+
+  a:hover {
+    text-decoration-color: white;
+    color: white;
+  }
+}
+
+/* Rest of your styles */
+body {
+  background-color: #121212;
+  color: white;
+  font-family: "Courier New", monospace;
+}
+.name {
+  font-family: "Georgia", serif;
+}
+a {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: #9ca3af; /* Slightly darker dotted line */
+  color: #d1d5db; /* Light gray, not as bright as white */
+  transition: all 0.2s ease;
+}
+a:hover {
+  text-decoration-color: white;
+  color: white;
+}
+.hyperlink::after {
+  content: "↗";
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: white;
+}
+.contact-form button {
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+.contact-form button:hover {
+  background-color: #e5e7eb;
+}
+
+/* More specific link styling */
+body a {
+  text-decoration: underline;
+  text-decoration-style: dotted !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 4px !important;
+  text-decoration-color: #9ca3af !important; /* Slightly darker dotted line */
+  color: #d1d5db !important; /* Light gray, not as bright as white */
+  transition: all 0.2s ease;
+}
+
+body a:hover {
+  text-decoration-color: white !important;
+  color: white !important;
+}
