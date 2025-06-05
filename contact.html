@@ -3,19 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Ian</title>
+    <title>Contact | Ian Wang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Courier+New:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <ul>
-      <li><a href="./">HOME</a></li>
-    </ul>
+  <body class="min-h-screen flex flex-col">
+    <div class="container mx-auto px-4 py-12 lg:py-24 flex-grow">
+      <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 xl:gap-24">
+        <!-- Left Column -->
+        <div
+          class="w-full lg:w-1/3 space-y-6 lg:sticky lg:top-24 lg:h-[calc(100vh-12rem)] lg:pr-4"
+        >
+          <!-- Name -->
+          <div class="space-y-0">
+            <h1
+              class="name text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-bold"
+            >
+              Contact
+            </h1>
+          </div>
 
-    <!-- MAIN (Center website) -->
-    <div class="main">
-      <h2 class="awards">Questions? Email at ianwa09@gmail.com</h2>
+          <!-- Back Link -->
+          <a href="index.html" class="block text-lg">&larr; Back to home</a>
+
+          <div class="pt-2">
+            <p class="opacity-80">
+              Feel free to reach out with questions or just to say hello!
+            </p>
+          </div>
+
+          <!-- Elsewhere Section -->
+          <div class="pt-8">
+            <h2 class="text-lg opacity-60 pb-2">Elsewhere</h2>
+            <div class="space-y-1">
+              <a
+                href="https://www.linkedin.com/in/ian-wang-35373235a/"
+                target="_blank"
+                class="block text-lg hyperlink"
+                >linkedin</a
+              >
+              <a
+                href="https://github.com/ianwa09"
+                target="_blank"
+                class="block text-lg hyperlink"
+                >github</a
+              >
+              <a href="awards.html" class="block text-lg hyperlink">awards</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="w-full lg:w-2/3">
+          <form
+            action="https://formsubmit.co/ianwa09@gmail.com"
+            method="POST"
+            class="contact-form space-y-4 max-w-lg"
+          >
+            <div>
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+
+          <div class="mt-12 opacity-80">
+            <p>Alternatively, you can email me directly:</p>
+            <a href="mailto:ianwa09@gmail.com" class="text-lg block mt-2"
+              >ianwa09@gmail.com</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="clearfix"></div>
+    <footer class="py-8 text-center">
+      <p class="text-xs opacity-40">
+        design inspired by @tinabmai and Tyler Taewook Kim
+      </p>
+    </footer>
   </body>
 </html>
