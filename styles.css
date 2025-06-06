@@ -85,3 +85,46 @@ body a:hover {
   text-decoration-color: white !important;
   color: white !important;
 }
+
+/* Quote section styles */
+.quote-container {
+  position: relative;
+  min-height: 4rem;
+  margin-top: 1.5rem;
+}
+
+#quote-text {
+  position: relative;
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  display: inline-block;
+}
+
+.typing-text {
+  white-space: pre-wrap;
+}
+
+.caret {
+  display: inline-block;
+  margin-left: -2px;
+  font-weight: 100;
+  color: #a3a3a3;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+#quote-author {
+  font-family: "Courier New", monospace;
+  opacity: 0;
+  transition: opacity 0.5s;
+  margin-top: 0.5rem;
+}
