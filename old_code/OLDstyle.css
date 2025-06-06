@@ -1,0 +1,365 @@
+
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans);
+@import url('https://fonts.googleapis.com/css2?family=Karla');
+@import url('https://fonts.googleapis.com/css2?family=Francois+One');
+@import url('https://fonts.googleapis.com/css2?family=Teko');
+
+h3 {
+  font-family: 'Karla';
+}
+
+p {
+ font-family: 'Karla';
+}
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+  color: #E8F1F2;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #13293D;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left:0vw;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color:white;
+  text-decoration: none;
+  font-family: 'Francois One';
+  font-size:4vh;
+  margin-top:3vh;
+  margin-left: 2vw;
+}
+
+/* Change the link color to #111 (black) on hover 
+li a:hover {
+  background-color: #111;
+}*/
+.quote-container {
+  position: fixed;
+  top:52%;
+  left: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 50vh; /* Adjust height as needed */
+}
+
+a.link{
+  color: #E8F1F2;
+}
+.hyper:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.hyper:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.hyper:hover {
+  color: gray;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.hyper:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.awards1:visited{
+  color:white;
+}
+
+h1.awards{
+  font-size: 6vh;
+  z-index: 3;
+  font-family: 'Karla';
+  margin-left: 2.5vw;
+  
+}
+h2.awards {
+  color: #E8F1F2;
+  font-size: 5vh;
+  z-index:1;
+  font-family: 'Karla';
+  margin-left: 2.5vw;
+
+
+  /*  position:absolute;
+  margin-left: -47vw;
+  margin-top:12vh;
+  
+    position:absolute;
+  margin-left: -47vw;
+  margin-bottom: 5px;
+  */
+}
+p.awards {
+  color: #E8F1F2;
+  font-size: 3vh;
+  z-index: 0;
+  font-family: 'Karla';
+  margin-left: 2.5vw;
+  
+
+
+}
+a.awards{
+  color: #E8F1F2;
+  font-size: 3vh;
+  z-index: 0;
+  font-family: 'Karla';
+  margin-left: 2.5vw;
+  font-style:italic;
+}
+a.awards1{
+  color: #E8F1F2;
+  font-size: 3vh;
+  z-index: 0;
+  font-family: 'Karla';
+  font-style:italic;
+}
+
+
+.fadein h1 { 
+  font-size: 1.5vw;
+  font-family: 'IBM Plex Sans';
+  letter-spacing: .15em;
+  text-align: left;
+  
+  opacity: 0;
+  animation: fadeInAnimation ease 2s;
+  animation-delay: 1.5s; /* Move animation-delay after animation property */
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+body {
+  background: #13293D;
+  padding-top: 5em;
+  display: flex;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 2px solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+
+  margin: 0 left; /* Gives that scrolling effect as the typing happens */
+  margin-bottom: -10px;
+
+  font-family: 'IBM Plex Sans';
+  font-size: 1.5vw;
+
+  
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 1.5s steps(70, end),
+    blink-caret .3s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.line-container {
+  position: fixed;
+  top: 70%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.line {
+  width: 93vw;
+  max-width: 150vw;
+  height: 2px;
+  background-color: #E8F1F2;
+  margin: 0 auto;
+}
+
+.home-bottom {
+  position: fixed;
+  text-align: center;
+  font-size: 5.6vw;
+  top: 35vh;
+  left: 3vw;
+  color: #fff; /* Set text color to white or your desired color */
+}
+
+
+.homebutton {
+  position:fixed;
+  text-align:left;
+  top:5vh;
+  left: 3vw;
+  font-size: 2vw;
+  color:white;
+  text-decoration: none;
+  font-family: 'Francois One';
+}
+
+.menu-opener {
+  position: fixed;
+  top: 5vh;
+  right: 3vw;
+  cursor:pointer;
+  z-index: 1;
+}
+
+.menu-opener .bar {
+  width: 1.75vw;
+  height: 0.5vh;
+  background-color: #ffffff;
+  position:relative;
+  z-index: 1;
+  right:0vw;
+  top: -5vh;
+  margin: 5px;
+  margin-left: 3vw;
+}
+
+.menu {
+  display: none; /* Initially hide the menu */
+  z-index:2;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #1D1E2C;
+  padding: 20px;
+  width: 200px;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2vw;
+  font-family: 'Teko';
+  margin-bottom: 10px;
+}
+
+.menu-text {
+  font-family: 'Francois One';
+  
+  font-size: 2vw;
+  position:relative;
+  right: 2vw;
+  color: #ffffff;
+}
+
+.menu-active {
+  display: flex; /* Display the menu when the menu-active class is applied */
+}
+.menu-active ~ .menu-text,
+.menu-active ~ .menu-opener .bar {
+  margin-right: 200px; /* Adjust the value based on your menu width */
+}
