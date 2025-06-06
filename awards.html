@@ -4,6 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awards | Ian Wang</title>
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -21,33 +40,45 @@
           <!-- Name -->
           <div class="space-y-0">
             <h1
-              class="name text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-bold"
+              class="name animate-name text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-bold"
             >
               Awards
             </h1>
           </div>
 
           <!-- Back Link -->
-          <a href="index.html" class="block text-lg">&larr; Back to home</a>
+          <a href="index.html" class="block text-lg animate-links"
+            >&larr; Back to home</a
+          >
 
           <!-- Elsewhere Section -->
           <div class="pt-8">
-            <a href="contact.html" class="block text-lg hyperlink">contact</a>
+            <a href="contact.html" class="block text-lg hyperlink animate-links"
+              >contact</a
+            >
             <br />
-            <h2 class="text-lg opacity-60 pb-2">Elsewhere</h2>
+            <h2 class="text-lg opacity-60 pb-2 animate-links">Elsewhere</h2>
             <div class="space-y-1">
               <a
                 href="https://www.linkedin.com/in/ian-wang-35373235a/"
                 target="_blank"
-                class="block text-lg hyperlink"
+                class="block text-lg hyperlink animate-links"
                 >linkedin</a
               >
               <a
                 href="https://github.com/ianwa09"
                 target="_blank"
-                class="block text-lg hyperlink"
+                class="block text-lg hyperlink animate-links"
                 >github</a
               >
+            </div>
+
+            <!-- Quote Section -->
+            <div class="mt-8 pt-6 border-t border-gray-800">
+              <div class="quote-container">
+                <div id="quote-text" class="text-sm opacity-70 italic"></div>
+                <div id="quote-author" class="text-xs mt-2 opacity-50"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -55,11 +86,11 @@
         <!-- Right Column -->
         <div class="w-full lg:w-2/3 space-y-12 lg:space-y-16">
           <div>
-            <h2 class="text-2xl lg:text-3xl opacity-90 pb-4">
+            <h2 class="text-2xl lg:text-3xl opacity-90 pb-4 animate-sections">
               Academic & Extracurricular Achievements
             </h2>
             <div class="space-y-8">
-              <div>
+              <div class="animate-content">
                 <span class="text-sm opacity-60 tracking-widest">01</span>
                 <h3 class="text-lg lg:text-xl opacity-90">
                   FIRST Tech Challenge
@@ -75,7 +106,7 @@
                 </p>
               </div>
 
-              <div>
+              <div class="animate-content">
                 <span class="text-sm opacity-60 tracking-widest">02</span>
                 <h3 class="text-lg lg:text-xl opacity-90">
                   SIMIS International Scholarship (2025)
@@ -87,7 +118,7 @@
                 </p>
               </div>
 
-              <div>
+              <div class="animate-content">
                 <span class="text-sm opacity-60 tracking-widest">03</span>
                 <h3 class="text-lg lg:text-xl opacity-90">
                   Le Grand Concours (National French Contest) (2025)
@@ -98,7 +129,7 @@
                 </p>
               </div>
 
-              <div>
+              <div class="animate-content">
                 <span class="text-sm opacity-60 tracking-widest">04</span>
                 <h3 class="text-lg lg:text-xl opacity-90">
                   MidState Cup | Decatur Soccer @ Millikin University (2025)
@@ -118,5 +149,268 @@
         design inspired by @tinabmai and Tyler Taewook Kim
       </p>
     </footer>
+
+    <!-- GSAP Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Animation Script -->
+    <script>
+      // Initialize GSAP
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Hide elements initially
+      gsap.set(
+        ".animate-name, .animate-content, .animate-links, .animate-sections",
+        {
+          opacity: 0,
+          y: 20,
+        }
+      );
+
+      // Name animation
+      gsap.to(".animate-name", {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power3.out",
+      });
+
+      // Links animation
+      gsap.to(".animate-links", {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        delay: 0.6,
+        stagger: 0.1,
+        ease: "power2.out",
+      });
+
+      // Section heading animation
+      gsap.to(".animate-sections", {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        delay: 0.8,
+        ease: "power2.out",
+      });
+
+      // Content items animation
+      gsap.to(".animate-content", {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        delay: 1,
+        stagger: 0.15,
+        ease: "power2.out",
+      });
+
+      // Add hover animations for links
+      const links = document.querySelectorAll("a.hyperlink");
+      links.forEach((link) => {
+        link.addEventListener("mouseenter", function () {
+          gsap.to(this, {
+            color: "white",
+            duration: 0.3,
+            ease: "power1.out",
+          });
+        });
+
+        link.addEventListener("mouseleave", function () {
+          gsap.to(this, {
+            color: "#d1d5db",
+            duration: 0.3,
+            ease: "power1.out",
+          });
+        });
+      });
+    </script>
+
+    <!-- Quote Script -->
+    <script>
+      // Quote typing animation
+      document.addEventListener("DOMContentLoaded", function () {
+        const quotes = [
+          {
+            quote: "Creativity is intelligence having fun.",
+            author: "Albert Einstein",
+          },
+          {
+            quote: "The best way to predict the future is to invent it.",
+            author: "Alan Kay",
+          },
+          {
+            quote:
+              "It does not matter how slowly you go as long as you do not stop.",
+            author: "Confucius",
+          },
+          {
+            quote: "In the middle of difficulty lies opportunity.",
+            author: "Albert Einstein",
+          },
+          {
+            quote: "The only way to do great work is to love what you do.",
+            author: "Steve Jobs",
+          },
+          {
+            quote: "Be the change that you wish to see in the world.",
+            author: "Mahatma Gandhi",
+          },
+          {
+            quote: "Principles have no real force except when one is well-fed.",
+            author: "Mark Twain",
+          },
+          {
+            quote:
+              "An artist is a dreamer consenting to dream of the actual world.",
+            author: "George Santayana",
+          },
+          {
+            quote:
+              "Every time I see a light at the end of the tunnel, it turns out to be an oncoming train.",
+            author: "Ange Postecoglou",
+          },
+          {
+            quote:
+              "I don't usually win trophies in my second season, I always win trophies in my second season.",
+            author: "Ange Postecoglou",
+          },
+          {
+            quote: "I've met gods. Gods bleed.",
+            author: "Phil Coulson (Agents of SHIELD, Season 3, Episode 17)",
+          },
+          {
+            quote: "Cool origin story, bro.",
+            author: "Phil Coulson (Agents of SHIELD, Season 4, Episode 14)",
+          },
+          {
+            quote: "Science, biatch!",
+            author: "Leopold Fitz (Agents of SHIELD, Season 2, Episode 22)",
+          },
+          {
+            quote:
+              "The steps you take don't need to be big; they just need to take you in the right direction.",
+            author: "Jemma Simmons (Agents of SHIELD, Season 5, Episode 13)",
+          },
+          {
+            quote:
+              "Prejudice is a great time saver. You can form opinions without having to get the facts.",
+            author: "E. B. White",
+          },
+          {
+            quote:
+              "Because things are the way they are, things will not stay the way they are.",
+            author: "Bertolt Brecht",
+          },
+          {
+            quote:
+              "Success is getting what you want. Happiness is wanting what you get.",
+            author: "Dale Carnegie",
+          },
+          {
+            quote: "If you want a thing done, do it yourself.",
+            author: "Napoleon Bonaparte",
+          },
+          {
+            quote: "Be not simply good; be good for something.",
+            author: "Henry David Thoreau",
+          },
+          {
+            quote: "Things start out as hopes and end up as habits.",
+            author: "Lillian Hellman",
+          },
+          {
+            quote: "Unless we remember we cannot understand.",
+            author: "E. M. Forster",
+          },
+          {
+            quote: "The perfection of art is to conceal art.",
+            author: "Quintilian",
+          },
+          {
+            quote:
+              "Without craftsmanship, inspiration is a mere reed shaken in the wind.",
+            author: "Johannes Brahms",
+          },
+          {
+            quote: "Soccer is simple, but it is difficult to play simple.",
+            author: "Johan Cruyff",
+          },
+          {
+            quote: "Life is a soccer field, don't you think?",
+            author: "Shakira",
+          },
+          {
+            quote:
+              "If you go to school you can meet friends and you can play soccer, you know?",
+            author: "Jin",
+          },
+          {
+            quote: "It's no use just winning, we've got to win well.",
+            author: "Bill Nicholson",
+          },
+          {
+            quote:
+              "It is better to fail aiming high than to succeed aiming low.",
+            author: "Bill Nicholson",
+          },
+          {
+            quote:
+              "Practice like you've never won. Play like you've never lost.",
+            author: "Michael Jordan",
+          },
+          {
+            quote:
+              "Your younger self had a dream, don't let that little kid down.",
+            author: "Kobe Simmons",
+          },
+        ];
+
+        const quoteContainer = document.querySelector(".quote-container");
+        const quoteElement = document.getElementById("quote-text");
+        const authorElement = document.getElementById("quote-author");
+
+        // Select a random quote
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+        // Clear existing content
+        quoteElement.innerHTML =
+          '<span class="typing-text"></span><span class="caret" id="caret">|</span>';
+        authorElement.textContent = "";
+
+        const typingElement = quoteElement.querySelector(".typing-text");
+        const caretElement = document.getElementById("caret");
+        const quoteText = randomQuote.quote;
+        const authorText = "— " + randomQuote.author;
+
+        let charIndex = 0;
+        let typingSpeed = 70; // milliseconds per character
+
+        // Function to type the next character
+        function typeNextChar() {
+          if (charIndex < quoteText.length) {
+            // Add the next character
+            typingElement.textContent += quoteText.charAt(charIndex);
+            charIndex++;
+
+            // Schedule the next character
+            setTimeout(typeNextChar, typingSpeed);
+          } else {
+            // When typing is complete, show the author
+            setTimeout(function () {
+              // Hide the caret
+              caretElement.style.display = "none";
+
+              // Show the author
+              authorElement.textContent = authorText;
+              authorElement.style.opacity = "1";
+            }, 500);
+          }
+        }
+
+        // Start typing after a delay
+        setTimeout(typeNextChar, 1500);
+      });
+    </script>
   </body>
 </html>
