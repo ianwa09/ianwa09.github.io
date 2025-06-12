@@ -128,3 +128,9 @@ body a:hover {
   transition: opacity 0.5s;
   margin-top: 0.5rem;
 }
+
+.hyperlink-dotted {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
